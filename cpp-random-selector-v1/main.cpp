@@ -22,9 +22,10 @@ void showMenu() {
 vector<string> addElements() {
     vector <string> myList;
     string element;
+    cin.ignore();
 
     do {
-        cout << "Film name:" << endl;
+        cout << "Film name: \n";
         getline(cin, element);
         if (element != "0") {
             myList.push_back(element);
@@ -64,7 +65,7 @@ int main() {
         showMenu();
 
         cin >> choice;
-        
+
         switch (choice) {
             case 1:
                 myList = addElements();
@@ -102,7 +103,7 @@ int main() {
                 cout << "Choose a correct option!" << endl;
                 break;
         }
-        
+
     } while (choice != 0);
     return 0;
 }
